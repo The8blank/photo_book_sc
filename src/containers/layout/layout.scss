@@ -7,17 +7,19 @@
 
   display: flex;
 
-  &__aside {
-    flex: 1;
-    background: #dabfbf;
-  }
-  &__home {
-   
-    flex: 3;
-    background: #d6cfcf;
+  .logo-mobile {
+    display: none;
+    font-family: var(--font-family);
+    color: black;
+    font-size: 15px;
   }
 
- 
+  &__aside {
+    flex: 1;
+  }
+  &__home {
+    flex: 3;
+  }
 }
 
 @media screen and (max-width: 1000px) {
@@ -26,20 +28,27 @@
     grid-template-columns: 80vw 100vw;
     position: relative;
 
+    .logo-mobile {
+      display: block;
+      position: fixed;
+      top: 20px;
+      left: 4%;
+      z-index: 9999;
+    }
     &__aside {
       width: 100%;
-      /* transform: translateX(-80vw); */
+    
     }
 
     &__home {
       width: 100%;
-      /* transform: translateX(-80vw); */
+      
     }
 
     .menu {
       display: block;
       position: fixed;
-      top: 3%;
+      top: 20px;
       right: 4%;
       z-index: 9999;
     }
