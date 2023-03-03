@@ -5,7 +5,7 @@ import "./aside.scss";
 import { Link } from "react-router-dom";
 
 const Aside = (props) => {
-  const { openMenu,setOpenMenu, isMobile } = props;
+  const { openMenu, setOpenMenu, isMobile } = props;
 
   const variant = {
     hidden: {
@@ -41,7 +41,14 @@ const Aside = (props) => {
             scale: 1.2,
           }}
         >
-          Home
+          <Link
+            to="/"
+            onClick={() => {
+              setOpenMenu(false);
+            }}
+          >
+            Home
+          </Link>
         </motion.li>
         <motion.li
           variants={variant}
@@ -65,7 +72,14 @@ const Aside = (props) => {
             scale: 1.2,
           }}
         >
-         About
+          <Link
+            to="/about"
+            onClick={() => {
+              setOpenMenu(false);
+            }}
+          >
+            About
+          </Link>
         </motion.li>
       </motion.ul>
     </motion.div>

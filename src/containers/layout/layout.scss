@@ -19,6 +19,10 @@
   }
   &__home {
     flex: 3;
+    margin-top: 12vh;
+    overflow: hidden;
+    overflow-y: scroll;
+
   }
 }
 

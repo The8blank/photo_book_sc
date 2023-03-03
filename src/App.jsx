@@ -7,10 +7,10 @@ import { Layout } from "./containers";
 function App() {
   return (
     <Layout>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-      </Routes>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
     </Layout>
   );
 }
