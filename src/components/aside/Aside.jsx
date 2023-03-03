@@ -2,9 +2,10 @@ import React from "react";
 import { motion } from "framer-motion";
 
 import "./aside.scss";
+import { Link } from "react-router-dom";
 
 const Aside = (props) => {
-  const { openMenu, isMobile } = props;
+  const { openMenu,setOpenMenu, isMobile } = props;
 
   const variant = {
     hidden: {
@@ -40,7 +41,7 @@ const Aside = (props) => {
             scale: 1.2,
           }}
         >
-          home
+          Home
         </motion.li>
         <motion.li
           variants={variant}
@@ -64,7 +65,7 @@ const Aside = (props) => {
             scale: 1.2,
           }}
         >
-          about
+         About
         </motion.li>
       </motion.ul>
     </motion.div>

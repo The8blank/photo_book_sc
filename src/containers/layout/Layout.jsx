@@ -84,7 +84,7 @@ const Layout = (props) => {
         transition={transition}
         className="main-container__aside"
       >
-        <Aside openMenu={openMenu} isMobile={isMobile} />
+        <Aside openMenu={openMenu} setOpenMenu={setOpenMenu} isMobile={isMobile} />
       </motion.div>
 
       {/* HOME */}
@@ -94,7 +94,6 @@ const Layout = (props) => {
         variants={variants}
         transition={transition}
         className="main-container__home"
-        openMenu={openMenu}
       >
         {props.children}
       </motion.div>

@@ -11,6 +11,11 @@
   user-select: none; /* Propriété standard */
 }
 
+a {
+  text-decoration: none;
+  color: var(--color-font-light);
+}
+
 :root {
   font-synthesis: none;
   text-rendering: optimizeLegibility;
