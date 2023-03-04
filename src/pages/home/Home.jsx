@@ -8,11 +8,11 @@ const Home = (props) => {
 
   return (
     <motion.div
-      animate={{ opacity: 1 }}
-      initial={{ opacity: 0 }}
+      animate={{ opacity: 1, x:0 }}
+      initial={{ opacity: 0, x: 500 }}
       transition={{
         delay: 0.4,
-        duration: 1,
+        duration: 0.8,
       }}
       className="home-main"
     >
