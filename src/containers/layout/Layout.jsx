@@ -2,6 +2,7 @@ import React, { createContext, useState, useEffect } from "react";
 import "./layout.scss";
 import { Aside } from "../../components";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const MenuContext = createContext({});
 
@@ -65,7 +66,7 @@ const Layout = (props) => {
               duration: 0.4,
             }}
           >
-            SAMUEL CHOJNACKI
+            <Link to="/">SAMUEL CHOJNACKI</Link>
           </motion.h1>
         ) : (
           ""
