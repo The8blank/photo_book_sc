@@ -1,42 +1,48 @@
 .aside-main {
-    
-   width: 100%;
-   height: 100%;
-   padding: 12vh 40px;
-   overflow-y: auto;
+  width: 100%;
+  height: 100%;
+  padding: 12vh 40px;
+  overflow-y: auto;
 
-   h1 {
+  h1 {
     font-family: var(--font-family);
     font-size: clamp(18px, 5vw, 25px);
     font-weight: 500;
     letter-spacing: -0.05em;
-   }
+  }
 
-   p{
+  > p {
     margin-top: 50px;
-    font-size:12px ;
+    font-size: 12px;
     font-weight: 600;
     font-family: var(--font-family);
     color: var(--color-font-light);
-   }
+  }
 
-   ul {
-
+  ul,a {
     list-style: none;
+    text-decoration: none;
     color: var(--color-font-light);
-
+    font-family: var(--font-family);
+    font-weight: 600;
     li {
-        font-family: var(--font-family);
-        font-weight: bold;
-        text-transform: capitalize;
-        margin-top: 8%;
+      margin-top: 20px;
+    }
+    ul {
+      p{
         cursor: pointer;
-        width: fit-content;
-    }
+      }
+      li{
+        margin-top: 10px;
+        margin-left: 10px;
+        font-size: calc(100% - 2px);
+        cursor: pointer;
+        font-family: 400;
 
-    li:hover {
-        transform: scale(1.2);
-        color: var(--color-font-dark);
+        a {
+          font-weight: 500;
+        }
+      }
     }
-   }
+  }
 }

@@ -1,11 +1,15 @@
-import React from "react";
+import React, { Fragment, useContext, useEffect, useState } from "react";
+import dataSidebar from "../../data/dataSidebar";
 import { motion } from "framer-motion";
+import { MenuContext } from "../../containers";
 
 import "./aside.scss";
 import { Link } from "react-router-dom";
+import Submenu from "../submenu/Submenu";
 
-const Aside = (props) => {
-  const { openMenu, setOpenMenu, isMobile } = props;
+const Aside = () => {
+
+  const { close, isMobile, openMenu , setShowList} = useContext(MenuContext);
 
   const variant = {
     hidden: {
@@ -17,9 +21,8 @@ const Aside = (props) => {
       opacity: 1,
 
       transition: {
-        duration: 0.5,
-        when: "beforeChildren",
-        staggerChildren: 0.2,
+        duration: 0.8,
+        staggerChildren: 0.1,
         ease: [0.76, 0, 0.24, 1],
       },
     },
@@ -32,56 +35,41 @@ const Aside = (props) => {
       variants={variant}
       className="aside-main"
     >
+      {/* SAMUEL CHOJNACKI */}
       <motion.h1 variants={variant}>SAMUEL CHOJNACKI</motion.h1>
+      {/* PETIT TEXTE */}
       <motion.p variants={variant}>Model and Comedian</motion.p>
-      <motion.ul>
-        <motion.li
-          variants={variant}
-          whileHover={{
-            scale: 1.2,
-          }}
-        >
-          <Link
-            to="/"
-            onClick={() => {
-              setOpenMenu(false);
-            }}
-          >
-            Home
-          </Link>
-        </motion.li>
-        <motion.li
-          variants={variant}
-          whileHover={{
-            scale: 1.2,
-          }}
-        >
-          series
-        </motion.li>
-        <motion.li
-          variants={variant}
-          whileHover={{
-            scale: 1.2,
-          }}
-        >
-          film
-        </motion.li>
-        <motion.li
-          variants={variant}
-          whileHover={{
-            scale: 1.2,
-          }}
-        >
-          <Link
-            to="/about"
-            onClick={() => {
-              setOpenMenu(false);
-            }}
-          >
-            About
-          </Link>
-        </motion.li>
-      </motion.ul>
+
+      {/* LINKS */}
+      <ul className="aside-main__links-container">
+        {dataSidebar.map((item, index) => {
+          return (
+            <Fragment  key={index}>
+              <motion.li
+              layout
+                className="aside-main__links-container__link"
+                variants={variant}
+              >
+                {/* LINKS */}
+                {item.link && (
+                  <Link
+                    onClick={() => {
+                      setShowList(false);
+                      close();
+                    }}
+                    to={item.link}
+                  >
+                    {item.title}
+                  </Link>
+                )}
+
+                {/* SUBMENU */}
+              </motion.li>
+                <Submenu item={item} variant={variant} />
+            </Fragment>
+          );
+        })}
+      </ul>
     </motion.div>
   );
 };

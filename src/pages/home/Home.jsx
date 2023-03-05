@@ -1,6 +1,6 @@
 import React from "react";
 import { data } from "../../data/dataHome";
-import { AnimatePresence, motion } from "framer-motion";
+import {  motion } from "framer-motion";
 import "./home.scss";
 
 const Home = (props) => {
@@ -8,7 +8,7 @@ const Home = (props) => {
 
   return (
     <motion.div
-      animate={{ opacity: 1, x:0 }}
+      animate={{ opacity: 1, x: 0 }}
       initial={{ opacity: 0, x: 500 }}
       transition={{
         delay: 0.4,
@@ -19,11 +19,10 @@ const Home = (props) => {
       <div className="home-main__gallerie-wrapper">
         {data.map((item, index) => {
           return (
-            <div className={item.class}>
+            <div className={item.class} key={index}>
               <img
                 loading="lazymotion."
                 src={item.imageUrl}
-                key={index}
                 alt="Samuel Chojnacki"
               ></img>
             </div>
