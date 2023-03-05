@@ -28,10 +28,20 @@
     li {
       margin-top: 20px;
     }
-    ul {
-      p{
-        cursor: pointer;
+
+    p {
+      cursor: pointer;
+      width: fit-content;
+      position: relative;
+
+      svg {
+        position: absolute;
+        right: 0- 50%;
+        top: 50%;
+        transform: translateY(-40%);
       }
+    }
+    ul {
       li{
         margin-top: 10px;
         margin-left: 10px;

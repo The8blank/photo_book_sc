@@ -2,6 +2,7 @@ import React, { useContext, useState, useEffect } from "react";
 import { MenuContext } from "./../../containers/layout/Layout";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { FiChevronDown, FiMoreHorizontal } from "react-icons/fi";
 
 const Submenu = ({ item, variant }) => {
   const { close, openMenu, isMobile, showList, setShowList } =
@@ -26,6 +27,7 @@ const Submenu = ({ item, variant }) => {
       <>
         <motion.p variants={variant} layout onClick={toggleList}>
           {item.title}
+          {showList === item.title.toLowerCase() ? <FiMoreHorizontal/> : <FiChevronDown/>}
         </motion.p>
         <motion.ul layout>
           {item.submenu.map((sub, index) => {
