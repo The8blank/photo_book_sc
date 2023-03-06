@@ -23,6 +23,7 @@ const About = () => {
           challenges. <br /> <br /> Let's create something beautiful together. <br /> <br /> Thank you for
           considering me, and I look forward to hearing from you soon.
         </p>
+        
       </div>
     </div>
   );

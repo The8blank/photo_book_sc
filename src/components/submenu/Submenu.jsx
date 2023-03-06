@@ -36,7 +36,7 @@ const Submenu = ({ item, variant }) => {
               (showList === item.title.toLowerCase() && !isMobile)
             ) {
               return (
-                <motion.li key={index}>
+                <motion.li key={index}> 
                   <Link
                     to={`${item.title.toLowerCase()}/${index}`}
                     onClick={() => {
