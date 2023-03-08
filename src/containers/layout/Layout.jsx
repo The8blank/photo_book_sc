@@ -24,7 +24,7 @@ const Layout = (props) => {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  },[]);
 
   const variants = {
     open: { x: 0 },

@@ -11,7 +11,6 @@ function App() {
         <Route path="/series/:id" element={<Series />} />
         <Route path="/films/:id" element={<Films />} />
         <Route path="/about" element={<About />} />
-        <Route path="/" element={<Navigate to="/" />} />
       </Routes>
     </Layout>
   );

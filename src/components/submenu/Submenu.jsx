@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import { MenuContext } from "./../../containers/layout/Layout";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
