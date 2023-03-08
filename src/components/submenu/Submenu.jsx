@@ -25,11 +25,11 @@ const Submenu = ({ item, variant }) => {
   return (
     item.submenu && (
       <>
-        <motion.p variants={variant} layout onClick={toggleList}>
+        <motion.p variants={variant} layout  onClick={toggleList}>
           {item.title}
           {showList === item.title.toLowerCase() ? <FiMoreHorizontal/> : <FiChevronDown/>}
         </motion.p>
-        <motion.ul layout>
+        <motion.ul layout >
           {item.submenu.map((sub, index) => {
             if (
               (showList === item.title.toLowerCase() && openMenu && isMobile) ||

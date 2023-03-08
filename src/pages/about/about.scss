@@ -1,20 +1,24 @@
 .about-main {
-    width: 100;
-    height: 100%;
-    
-    font-family: var(--font-family);
+  width: 100;
+  height: 100%;
+  font-family: var(--font-family);
+  text-align: center;
+  letter-spacing: -0.05em;
 
-    h1 {
-        margin: 0 50px ;
+  &__presentation {
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+      margin-top: 25px;
     }
 
-    p {
-        font-size: 25px;
-        font-weight: 600;
-        line-height: 30px;
-        letter-spacing: 0.05em;
-        padding: 50px 50px 150px;
-        columns: 400px auto;
+    &__social-container {
+        margin-top: 25px;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      font-size: 25px;
     }
-    
+  }
 }

@@ -1,6 +1,6 @@
 .main-container {
-  overflow-y: hidden;
-  overflow-x: hidden;
+  overflow-y: none;
+  overflow-x: none;
   width: 100%;
   max-width: 1880px;
   margin: 0 auto;
@@ -24,6 +24,7 @@
   }
   &__home {
     flex: 3;
+    padding: 25px;
     margin-top: 12vh;
     overflow: hidden;
     overflow-y: scroll;

@@ -1,6 +1,6 @@
 const data = [
     {
-        imageUrl : "./images/portfolio_sam/homepage/h-0.webp",
+        imageUrl : "/images/portfolio_sam/homepage/h-0.webp",
         class : "big"
     },
     {
