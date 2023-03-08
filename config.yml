@@ -1,0 +1,8 @@
+# Définit les variables d'environnement pour l'application
+env:
+  NODE_ENV: production
+
+# Définit la commande de démarrage pour l'application
+build:
+  dockerfile: Dockerfile
+  command: npm run build
