@@ -7,7 +7,8 @@ function App() {
   return (
     <Layout>
       <Routes>
-        <Route path="*" element={<Home />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/*" element={<Navigate to="/"/>} />
         <Route path="/series/:id" element={<Series />} />
         <Route path="/films/:id" element={<Films />} />
         <Route path="/about" element={<About />} />
